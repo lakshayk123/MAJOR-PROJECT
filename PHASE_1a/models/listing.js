@@ -17,10 +17,10 @@ const listingSchema=new Schema({
     },
     url: {
         type: String,
-        default: "https://your-default-image-url.com/image.jpg",
+        default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD-dgyakjW-Yoyu5EzRMBR5BTc3uxwcmUC1PRHLIpPxQ&s=10",
         set: (v) =>
             v === ""
-                ? "https://your-default-image-url.com/image.jpg"
+                ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD-dgyakjW-Yoyu5EzRMBR5BTc3uxwcmUC1PRHLIpPxQ&s=10"
                 : v
     }
     },

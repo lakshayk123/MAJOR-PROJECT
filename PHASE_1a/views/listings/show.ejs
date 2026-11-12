@@ -1,16 +1,36 @@
 <% layout("/layouts/boilerplate")%>
 <body>
-    <h1>Listing Details :</h1>
-    <ul>
-        <li><%=listing.title %></li>
-        <li><%=listing.description %></li>
-        <li>&#8377; <%=listing.price.toLocaleString("en-IN") %></li>
-        <li><%=listing.location %></li>
-        <li><%=listing.country %></li>
-    
-    </ul>
-    <br><br>
-    <a href="/listings/<%= listing._id%>/edit">Edit this listing</a>
-    <br><br>
-    <form action="/listings/<%=listing._id%>?_method=DELETE" method="post"><button>Delete</button></form>
-</body>
+
+<div class="row">
+
+    <div class="col-md-8 offset-3 mb-3">
+    <h3>Listing Details</h3>
+    </div>
+
+    <div class="col-md-6 offset-3 show-card">
+    <div class="card ">
+        <img src="<%=listing.image.url%>" class="card-img-top" style="height:14rem"  alt="place">
+        <div class="card-img-overlay">
+        <h5 class="card-title">*</h5>
+        </div>
+        <div class="card-body">
+            <p><b><%=listing.title%></b></p>
+            <p><%=listing.description %></p>
+            <p>&#8377; <%=listing.price.toLocaleString("en-IN") %></p>
+            <p><%=listing.location %></p>
+            <p><%=listing.country %></p>
+        </div>
+    </div>
+    </div>
+    <div class="btns " >
+        <a href="/listings/<%= listing._id%>/edit"  class="btn btn-outline add-btn col-md-1 edit-btn" >
+            Edit
+        </a>
+        
+        <form action="/listings/<%=listing._id%>?_method=DELETE" method="post">
+            <button class="btn btn-outline add-btn  delete-btn">Delete</button></a>
+        </form>
+    </div>
+    </div>
+        <br>
+    </body>

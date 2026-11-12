@@ -1,8 +1,15 @@
   body{
     /* background-color: pink; */
       font-family: "Plus Jakarta Sans", sans-serif !important;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
 
 } 
+
+.container{
+    flex:1;
+}
 
 /* navbar */
 .navbar{
@@ -95,3 +102,35 @@
 }
 
 
+ /* styling for new page  and edit button */
+.add-btn{
+    border-color: #222222;
+}
+.add-btn:hover{
+
+    background-color: #fe424d !important;
+    border-color: none !important;
+
+}
+
+/* show page */
+.btns{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+.edit-btn:hover{
+    background-color: #fe424d !important;
+}
+
+.delete-btn:hover{
+    background-color: #fe424d !important;
+}
+
+.show-card{
+    padding-left:0 ;
+    padding-right:0 ;
+
+}
